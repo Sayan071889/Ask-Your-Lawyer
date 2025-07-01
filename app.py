@@ -6,10 +6,8 @@ uploaded_file = st.file_uploader("Upload PDF",
                                  type="pdf",
                                  accept_multiple_files=False)
 
-# Step2: Chatbot Skeleton (Question & Answer)
 user_query = st.text_area("Enter your prompt: ", height=150, placeholder="Ask Anything!")
 
-# Single button definition - removed the duplicate
 if st.button("Ask AI Lawyer"):
     if uploaded_file and user_query:
         upload_pdf(uploaded_file)
